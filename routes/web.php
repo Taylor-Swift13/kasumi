@@ -16,3 +16,7 @@ Route::namespace('Web')->group(function (){
 
     $this->get('/login','AppController@getLogin')->middleware('guest')->name('login');
 });
+
+
+
+//https://photos.app.goo.gl/mpSkpaS6FT94L7d26
