@@ -11,12 +11,12 @@
 |
 */
 
-Route::namespace('Web')->group(function (){
-    $this->get('/','AppController@getApp')->middleware('auth');
+Route::namespace('Web')->group(function () {
 
-    $this->get('/login','AppController@getLogin')->middleware('guest')->name('login');
+    $this->get('/', 'AppController@getApp')->middleware('auth');
+
+    $this->get('/login', 'AppController@getLogin')->middleware('guest')->name('login');
+
+    $this->get('/auth/{social}', 'AuthenticationController@getSocialRedirect')->middleware('guest');
+    $this->get('/auth/{social}/callback', 'AuthenticationController@getSocialCallback')->middleware('guest');
 });
-
-
-
-//https://photos.app.goo.gl/mpSkpaS6FT94L7d26
