@@ -1,9 +1,15 @@
 <?php
+/**
+ * @author porsche liu
+ */
 
 namespace App\Http\Controllers\Web;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Socialite;
+use Auth;
 
 class AuthenticationController extends Controller
 {
